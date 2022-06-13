@@ -1,10 +1,8 @@
-package pp;
-
 import java.util.Random;
 
-public class Solution {
+public class Solution1 {
     int[] nums;
-    public Solution(int[] nums) {
+    public Solution1(int[] nums) {
         this.nums=nums;
     }
 
@@ -38,14 +36,14 @@ public class Solution {
     }
 }
 
-class demo{
-    public static void main(String[] args) {
-        Solution solution=new Solution(new int[]{1,2,3,3,3});
-        System.out.println(solution.pick(3));
-        System.out.println(solution.pick(1));
-        System.out.println(solution.pick(3));
-    }
-}
+//class demo{
+//    public static void main(String[] args) {
+//        Solution solution=new Solution(new int[]{1,2,3,3,3});
+//        System.out.println(solution.pick(3));
+//        System.out.println(solution.pick(1));
+//        System.out.println(solution.pick(3));
+//    }
+//}
 
 /**
  * Your Solution object will be instantiated and called as such:
