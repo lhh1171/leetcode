@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 class Solution2 {
     public int heightChecker(int[] heights) {
-        int[] arr = new int[101];
+        int[] arr = new int[heights.length+1];
         for (int height : heights) {
             arr[height]++;
         }
