@@ -51,9 +51,9 @@ class Solution4 {
         return ans;
     }
 }
-class demo{
-    public static void main(String[] args) {
-        Solution4 solution4=new Solution4();
-        System.out.println(solution4.smallestDistancePair(new int[]{1,13,45,67,34,100,150,201,300}, 4));
-    }
-}
+//class demo{
+//    public static void main(String[] args) {
+//        Solution4 solution4=new Solution4();
+//        System.out.println(solution4.smallestDistancePair(new int[]{1,13,45,67,34,100,150,201,300}, 4));
+//    }
+//}
