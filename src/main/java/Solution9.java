@@ -4,7 +4,7 @@ import java.util.Arrays;
 //找到了，然后把nums[i] 替换成 它的右边 比它大的所有数字中<最小的那个数字>
 //比如230241 ,发现了2<4，i定为2对应下标，然后把他替换成2右边>2的数字中最小的那个，41中只有4，-->230421
 //再把替换后的数组，i下标位置后的数排个序，达到最小的效果 4右边的21排序，成12，最终-->230412得最优
- class Solution9 {
+ public class Solution9 {
     public int nextGreaterElement(int n) {
         //只有一位数，那没有组合能大于它自己
         if (n < 10)
@@ -27,7 +27,7 @@ import java.util.Arrays;
             number[1] = temp;
 
             //再将转换好的int数组转回字符串
-            StringBuffer sb = new StringBuffer();
+            StringBuilder sb = new StringBuilder();
             for (int k = 0; k < str.length(); k++) {
                 sb.append(String.valueOf(number[k]));
             }
@@ -79,7 +79,7 @@ import java.util.Arrays;
                 Arrays.sort(number, index + 1, number.length);
                 //最后将弄好的int数组转化成字符串
 
-                StringBuffer sb = new StringBuffer();
+                StringBuilder sb = new StringBuilder();
                 for (int k = 0; k < str.length(); k++) {
                     sb.append(String.valueOf(number[k]));
                 }
