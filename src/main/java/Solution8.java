@@ -1,7 +1,10 @@
 import java.util.ArrayList;
 import java.util.List;
-
-class Solution {
+/*遍历字符串当遇到运算符时可以将字符串分为两部分分别求解，然后根据当前运算符将两部分结果进行响应的运算即可。
+使用递归即可枚举出所有情况。递归的边界条件为子串内没有运算符，子串所代表的数字就是结果。
+递归每深入一层，子串里的运算符就提升一级。每层递归里的 for 保证当前子串的每个运算符都在同一优先级运算过。
+*/
+class Solution8 {
     char[] array;
     public List<Integer> diffWaysToCompute(String expression) {
         array = expression.toCharArray();
@@ -12,7 +15,7 @@ class Solution {
         List<Integer> ans = new ArrayList<>();
         for(int i = l; i <= r; i++) {
             if(array[i] >= '0' && array[i] <= '9') continue;
-            //递归起来,l:0,      i-1:-1,0,1,2,3,4....     i+1:1,2,3,4,5,6,       r:5
+            //碰到运算符递归起来,l:0,      i-1:-1,0,1,2,3,4....     i+1:1,2,3,4,5,6,       r:5
             List<Integer> lr = dfs(l, i-1), rr = dfs(i+1, r);
             for(int a: lr) {
                 for(int b: rr) {
@@ -46,13 +49,11 @@ class Solution {
         return ans;
     }
 }
-class demo{
-    public static void main(String[] args) {
-        Solution solution=new Solution();
-        System.out.println(solution.diffWaysToCompute("2*3-4*5"));
-        System.out.println("-------------------------------------------------------");
-    }
-
-
-}
+//class demo{
+//    public static void main(String[] args) {
+//        Solution8 solution=new Solution8();
+//        System.out.println(solution.diffWaysToCompute("2*3-4*5"));
+//        System.out.println("-------------------------------------------------------");
+//    }
+//}
 /*[-34, -10, -14, -10, 10]*/
