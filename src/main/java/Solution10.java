@@ -30,7 +30,7 @@ class Solution10 {
                 temp[i][0] += digitsLen + temp[i - 1][0] * digitsLen;
             }
         }
-        //
+        //每一位都小于  ， 有一位或者以上等于的数字
         return temp[limitMaxStrLen][0] + temp[limitMaxStrLen][1];
     }
 }
