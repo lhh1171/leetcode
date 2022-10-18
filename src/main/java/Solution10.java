@@ -12,6 +12,10 @@ class Solution10 {
         int[][] temp = new int[limitMaxStrLen + 1][2];
         temp[0][1] = 1;
         for (int i = 1; i <= limitMaxStrLen; i++) {
+            // 在LimitMax当前位，
+            // 遍历digits时候，
+            // ==当前位的时候 temp[i][1] = temp[i-1][1],等于必须每一位都得等于
+            // <当前位的时候  temp[i][0] += temp[i - 1][1]，digits每一位小于LimitMax当前位的个数的 + 上一位这个数的累乘
             for (String digit : digits) {
                 if (digit.charAt(0) == limitMaxStr.charAt(i - 1)) {
                     temp[i][1] = temp[i - 1][1];
@@ -22,9 +26,11 @@ class Solution10 {
                 }
             }
             if (i > 1) {
+                //累乘
                 temp[i][0] += digitsLen + temp[i - 1][0] * digitsLen;
             }
         }
+        //
         return temp[limitMaxStrLen][0] + temp[limitMaxStrLen][1];
     }
 }
