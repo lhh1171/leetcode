@@ -12,10 +12,10 @@ class Solution10 {
         int[][] temp = new int[limitMaxStrLen + 1][2];
         temp[0][1] = 1;
         for (int i = 1; i <= limitMaxStrLen; i++) {
-            for (int j = 0; j < digitsLen; j++) {
-                if (digits[j].charAt(0) == limitMaxStr.charAt(i - 1)) {
+            for (String digit : digits) {
+                if (digit.charAt(0) == limitMaxStr.charAt(i - 1)) {
                     temp[i][1] = temp[i - 1][1];
-                } else if (digits[j].charAt(0) < limitMaxStr.charAt(i - 1)) {
+                } else if (digit.charAt(0) < limitMaxStr.charAt(i - 1)) {
                     temp[i][0] += temp[i - 1][1];
                 } else {
                     break;
