@@ -33,13 +33,21 @@ class Solution779 {
         return (k & 1) ^ 1 ^ kthGrammar1(n - 1, (k + 1) / 2);
     }
 
-    //按位求解
+    //按位求解qu
+    /*
+    * 0
+    * 01
+    * 0110
+    * 01101001
+    * 0110100110010110*/
     public int kthGrammar2(int n, int k) {
         // return Integer.bitCount(k - 1) & 1;
         k--;
         int res = 0;
         while (k > 0) {
+            //取反
             k &= k - 1;
+            //亦或
             res ^= 1;
         }
         return res;
