@@ -1,3 +1,5 @@
+package old;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,7 +32,7 @@ class Solution7 {
 /*
 class demo{
     public static void main(String[] args) {
-        Solution7 solution7=new Solution7();
+        old.Solution7 solution7=new old.Solution7();
         System.out.println(solution7.numPrimeArrangements(3));
 
     }

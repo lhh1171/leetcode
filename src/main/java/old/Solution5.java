@@ -1,3 +1,5 @@
+package old;
+
 class Solution5 {
     public void duplicateZeros(int[] arr) {
         int n = arr.length, i = 0, j = 0;

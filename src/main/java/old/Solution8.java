@@ -1,3 +1,5 @@
+package old;
+
 import java.util.ArrayList;
 import java.util.List;
 /*遍历字符串当遇到运算符时可以将字符串分为两部分分别求解，然后根据当前运算符将两部分结果进行响应的运算即可。
@@ -51,7 +53,7 @@ class Solution8 {
 }
 //class demo{
 //    public static void main(String[] args) {
-//        Solution8 solution=new Solution8();
+//        old.Solution8 solution=new old.Solution8();
 //        System.out.println(solution.diffWaysToCompute("2*3-4*5"));
 //        System.out.println("-------------------------------------------------------");
 //    }

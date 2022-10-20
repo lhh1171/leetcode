@@ -1,3 +1,5 @@
+package old;
+
 public class Solution6 {
     public Node insert(Node head, int insertVal) {
         Node node = new Node(insertVal);

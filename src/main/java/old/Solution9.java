@@ -1,3 +1,5 @@
+package old;
+
 import java.util.Arrays;
 
 //i从最后一个数字下标起，往前找，找到nums[i]<nums[i+1]这样的下标i，找不到就代表数字是54321这样的，return -1

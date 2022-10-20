@@ -1,3 +1,5 @@
+package old;
+
 class Solution3 {
     public int[] findDiagonalOrder(int[][] mat) {
         int row = 0, col = 0, row_max = mat.length, col_max = mat[0].length;
