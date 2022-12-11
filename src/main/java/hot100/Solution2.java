@@ -3,25 +3,28 @@ package hot100;
 /**
  * Definition for singly-linked list.
  */
-class ListNode {
-    int val;
-    ListNode next;
 
-    ListNode() {
-    }
-
-    ListNode(int val) {
-        this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
-}
 
 //链表遍历
 public class Solution2 {
+
+    static class ListNode {
+        int val;
+        Solution2.ListNode next;
+
+        ListNode() {
+        }
+
+        ListNode(int val) {
+            this.val = val;
+        }
+
+        ListNode(int val, Solution2.ListNode next) {
+            this.val = val;
+            this.next = next;
+        }
+    }
+
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode root = new ListNode(0);
         ListNode cursor = root;
