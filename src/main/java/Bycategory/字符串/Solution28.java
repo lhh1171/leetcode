@@ -122,6 +122,7 @@ class Solution28 {
     private void getNext3(int[] next, String s) {
         int j = 0;
         next[0] = 0;
+        // 遍历s.length-1次
         for (int i = 1; i < s.length(); i++) {
             while (j > 0 && s.charAt(j) != s.charAt(i))
                 j = next[j - 1];
@@ -133,6 +134,10 @@ class Solution28 {
 
     public static void main(String[] args) {
         Solution28 solution28=new Solution28();
+        //0 1 0 1 2 0
         solution28.strStr3("aabaabaaf","aabaaf");
+
+        //0 0 1 2 3 4 5 6
+//        solution28.strStr3("aabaabaaf","abababab");
     }
 }
