@@ -3,7 +3,7 @@ package Bycategory.二叉树;
 import java.util.ArrayDeque;
 
 //DFS递归
-class Solution {
+class Solution226 {
     /**
      * 前后序遍历都可以
      * 中序不行，因为先左孩子交换孩子，再根交换孩子（做完后，右孩子已经变成了原来的左孩子），再右孩子交换孩子（此时其实是对原来的左孩子做交换）
