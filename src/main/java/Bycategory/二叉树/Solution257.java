@@ -19,7 +19,8 @@ class Solution257 {
         return res;
     }
 
-    private void traversal1(TreeNode root, List<Integer> paths, List<String> res) {
+    private void traversal1(TreeNode root, List<Integer> paths,
+                            List<String> res) {
         paths.add(root.val);
         // 叶子结点
         if (root.left == null && root.right == null) {
@@ -54,7 +55,7 @@ class Solution257 {
         stack.push(root);
         stack.push(root.val + "");
         while (!stack.isEmpty()) {
-            // 节点和路径同时出栈
+            // 节点和路径同时出栈,回溯过程
             String path = (String) stack.pop();
             TreeNode node = (TreeNode) stack.pop();
             // 若找到叶子节点
