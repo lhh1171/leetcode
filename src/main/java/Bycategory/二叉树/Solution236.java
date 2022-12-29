@@ -10,9 +10,11 @@ public class  Solution236 {
         TreeNode left = lowestCommonAncestor(root.left, p, q);
         TreeNode right = lowestCommonAncestor(root.right, p, q);
 
-        if(left == null && right == null) { // 若未找到节点 p 或 q
+        if(left == null && right == null) {
+            // 若未找到节点 p 或 q
             return null;
-        }else if(left == null && right != null) { // 若找到一个节点
+        }else if(left == null && right != null) {
+            // 若找到一个节点
             return right;
         }else if(left != null && right == null) { // 若找到一个节点
             return left;
