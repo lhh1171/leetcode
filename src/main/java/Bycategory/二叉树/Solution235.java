@@ -8,7 +8,8 @@ public class Solution235 {
     }
 
 
-    public TreeNode lowestCommonAncestor2(TreeNode root, TreeNode p, TreeNode q) {
+    public TreeNode lowestCommonAncestor2(TreeNode root,
+                                          TreeNode p, TreeNode q) {
         while (true) {
             if (root.val > p.val && root.val > q.val) {
                 root = root.left;
@@ -20,6 +21,5 @@ public class Solution235 {
         }
         return root;
     }
-
 
 }
