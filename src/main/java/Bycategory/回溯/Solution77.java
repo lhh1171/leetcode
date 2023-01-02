@@ -27,6 +27,7 @@ public class Solution77 {
         }
         for (int i = startIndex; i <= n - (k - path.size()) + 1; i++) {
             path.add(i);
+            //递归
             combineHelper(n, k, i + 1);
             path.removeLast();
         }
