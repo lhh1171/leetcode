@@ -1,4 +1,9 @@
-class Solution17 {
+package Bycategory.回溯;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Solution17 {
 
     //设置全局列表存储最后的结果
     List<String> list = new ArrayList<>();
@@ -36,3 +41,4 @@ class Solution17 {
         }
     }
 }
+
