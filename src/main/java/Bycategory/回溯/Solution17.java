@@ -17,7 +17,6 @@ public class Solution17 {
         //迭代处理
         backTracking(digits, numString, 0);
         return list;
-
     }
 
     //每次迭代获取一个字符串，所以会设计大量的字符串拼接，所以这里选择更为高效的 StringBuild
@@ -30,6 +29,7 @@ public class Solution17 {
             list.add(temp.toString());
             return;
         }
+
         //str 表示当前num对应的字符串
         String str = numString[digits.charAt(num) - '0'];
         for (int i = 0; i < str.length(); i++) {
@@ -41,4 +41,3 @@ public class Solution17 {
         }
     }
 }
-
