@@ -13,7 +13,8 @@ class Solution39 {
         return res;
     }
 
-    public void backtracking(List<List<Integer>> res, List<Integer> path, int[] candidates, int target, int sum, int idx) {
+    public void backtracking(List<List<Integer>> res,
+                             List<Integer> path, int[] candidates, int target, int sum, int idx) {
         // 找到了数字和为 target 的组合
         if (sum == target) {
             res.add(new ArrayList<>(path));
