@@ -1,11 +1,11 @@
-package Bycategory.哈希;
+package Bycategory.回溯;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
-class Solution {
+class Solution40 {
     LinkedList<Integer> path1 = new LinkedList<>();
     List<List<Integer>> ans1 = new ArrayList<>();
     boolean[] used1;
