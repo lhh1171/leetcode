@@ -16,7 +16,7 @@ public class Solution216 {
     }
 
     private void backTracking(int targetSum, int k, int startIndex, int sum) {
-        // 减枝
+        // 减枝，results不收集该结果
         if (sum > targetSum) {
             return;
         }

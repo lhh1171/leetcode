@@ -30,7 +30,7 @@ public class Solution17 {
             return;
         }
 
-        //str 表示当前num对应的字符串
+        //str 表示当前num对应的字符串,读取digits里面Num位置的数字digits.charAt(num) - '0'，找到对应字符串
         String str = numString[digits.charAt(num) - '0'];
         for (int i = 0; i < str.length(); i++) {
             temp.append(str.charAt(i));

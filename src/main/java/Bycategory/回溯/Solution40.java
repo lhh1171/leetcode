@@ -12,6 +12,7 @@ class Solution40 {
     int sum1 = 0;
 
     public List<List<Integer>> combinationSum1(int[] candidates, int target) {
+        //used的长度等于数组的长度
         used1 = new boolean[candidates.length];
         // 加标志数组，用来辅助判断同层节点是否已经遍历
         Arrays.fill(used1, false);
@@ -26,6 +27,7 @@ class Solution40 {
             ans1.add(new ArrayList(path1));
         }
         for (int i = startIndex; i < candidates.length; i++) {
+            //剪枝
             if (sum1 + candidates[i] > target) {
                 break;
             }
@@ -78,5 +80,10 @@ class Solution40 {
             sum2 -= temp;
             path2.removeLast();
         }
+    }
+
+    public static void main(String[] args) {
+        Solution40 solution40=new Solution40();
+        solution40.combinationSum1(new int[]{2,5,2,1,2},5);
     }
 }
