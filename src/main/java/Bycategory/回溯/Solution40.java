@@ -61,22 +61,25 @@ class Solution40 {
 
     private void backTracking2(int[] candidates, int target, int start ) {
         if ( sum2 == target ) {
+            System.out.println();
             res2.add( new ArrayList<>(path2) );
             return;
         }
         for (int i = start; i < candidates.length && sum2 + candidates[i] <= target; i++ ) {
             //正确剔除重复解的办法
             //跳过同一树层使用过的元素
+            //因为排过序
             if ( i > start && candidates[i] == candidates[i - 1] ) {
+                System.out.println(candidates[i]+","+candidates[i - 1]);
                 continue;
             }
-
             sum2 += candidates[i];
-            path2.add( candidates[i] );
+            path2.add(candidates[i]);
+            System.out.println(path2);
             // i+1 代表当前组内元素只选取一次
             backTracking2( candidates, target, i + 1 );
-
             int temp = path2.getLast();
+            System.out.println("退出"+temp);
             sum2 -= temp;
             path2.removeLast();
         }
@@ -84,6 +87,6 @@ class Solution40 {
 
     public static void main(String[] args) {
         Solution40 solution40=new Solution40();
-        solution40.combinationSum1(new int[]{2,5,2,1,2},5);
+        solution40.combinationSum2(new int[]{2,5,2,1,2},5);
     }
 }

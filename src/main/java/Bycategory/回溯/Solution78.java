@@ -13,8 +13,10 @@ class Solution78 {
     }
 
     private void subsetsHelper(int[] nums, int startIndex){
-        result.add(new ArrayList<>(path));//「遍历这个树的时候，把所有节点都记录下来，就是要求的子集集合」。
-        if (startIndex >= nums.length){ //终止条件可不加
+        //「遍历这个树的时候，把所有节点都记录下来，就是要求的子集集合」。
+        result.add(new ArrayList<>(path));
+        //终止条件可不加
+        if (startIndex >= nums.length){
             return;
         }
         for (int i = startIndex; i < nums.length; i++){
