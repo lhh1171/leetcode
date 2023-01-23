@@ -3,7 +3,7 @@ package Bycategory.贪心;
 import java.util.Arrays;
 import java.util.stream.IntStream;
 
-class Solution {
+class Solution1005 {
     public int largestSumAfterKNegations1(int[] nums, int K) {
         // 将数组按照绝对值大小从大到小排序，注意要按照绝对值的大小
         nums = IntStream.of(nums)
