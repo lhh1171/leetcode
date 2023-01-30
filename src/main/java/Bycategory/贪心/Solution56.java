@@ -9,7 +9,8 @@ import java.util.List;
 空间复杂度 ： O(logN)  java 的内置排序是快速排序 需要 O(logN)空间
 
 */
-class Solution {
+class Solution56 {
+    // 版本1
     public int[][] merge1(int[][] intervals) {
         List<int[]> res = new LinkedList<>();
         //按照左边界排序
@@ -33,8 +34,6 @@ class Solution {
         return res.toArray(new int[res.size()][]);
     }
 
-
-
     // 版本2
     public int[][] merge2(int[][] intervals) {
         LinkedList<int[]> res = new LinkedList<>();
@@ -46,10 +45,9 @@ class Solution {
                 int end = Math.max(intervals[i][1], res.getLast()[1]);
                 res.removeLast();
                 res.add(new int[]{start, end});
-            }
-            else {
+            } else {
                 res.add(intervals[i]);
-            }         
+            }
         }
         return res.toArray(new int[res.size()][]);
     }
