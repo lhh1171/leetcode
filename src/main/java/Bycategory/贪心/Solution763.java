@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
-class Solution {
+class Solution763 {
     public List<Integer> partitionLabels1(String S) {
         List<Integer> list = new LinkedList<>();
         int[] edge = new int[26];
