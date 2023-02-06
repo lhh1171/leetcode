@@ -1,7 +1,8 @@
 package Bycategory.贪心;
 
+
 class Solution376 {
-    public int wiggleMaxLength(int[] nums) {
+    public static int wiggleMaxLength(int[] nums) {
         if (nums.length <= 1) {
             return nums.length;
         }
@@ -13,13 +14,19 @@ class Solution376 {
         for (int i = 1; i < nums.length; i++) {
             //得到当前差值
             curDiff = nums[i] - nums[i - 1];
-            //如果当前差值和上一个差值为一正一负
+            //如果当前差值和上一个差值为一正一负,这就是贪心的地方
             //等于0的情况表示初始时的preDiff
-            if ((curDiff > 0 && preDiff <= 0) || (curDiff < 0 && preDiff >= 0)) {
+            //当前差值大于0且之前差值小于等于0，或者，当前差值小于0且之前差值大于于等于0
+            if ((curDiff > 0 && preDiff <= 0) ||
+                    (curDiff < 0 && preDiff >= 0)) {
                 count++;
                 preDiff = curDiff;
             }
         }
         return count;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(wiggleMaxLength(new int[]{-1, -2, -3, -4}));
     }
 }
