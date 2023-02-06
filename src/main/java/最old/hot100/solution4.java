@@ -1,4 +1,4 @@
-package hot100;
+package 最old.hot100;
 
 public class solution4 {
     //暴力

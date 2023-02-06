@@ -1,4 +1,4 @@
-package simple;
+package 最old.simple;
 
 class Solution1768 {
     public String mergeAlternately(String word1, String word2) {

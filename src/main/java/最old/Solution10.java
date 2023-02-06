@@ -1,4 +1,4 @@
-package old;
+package 最old;
 
 /*
 * 给定一个按 非递减顺序 排列的数字数组 digits 。

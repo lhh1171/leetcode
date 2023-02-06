@@ -1,4 +1,4 @@
-package old;
+package 最old;
 
 public class Solution6 {
     public Node insert(Node head, int insertVal) {

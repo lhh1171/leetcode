@@ -1,6 +1,4 @@
-package old;
-
-import java.util.Arrays;
+package 最old;
 
 class Solution2 {
     public int heightChecker(int[] heights) {

@@ -1,4 +1,4 @@
-package normal;
+package 最old.normal;
 
 class Solution915 {
     public int partitionDisjoint(int[] nums) {
