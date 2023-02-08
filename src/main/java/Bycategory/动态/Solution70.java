@@ -1,6 +1,6 @@
 package Bycategory.动态;
 
-class Solution {
+class Solution70 {
     // 常规方式
     public int climbStairs1(int n) {
         int[] dp = new int[n + 1];
