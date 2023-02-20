@@ -297,10 +297,12 @@ public class RBTree<T extends Comparable<T>> {
             if (parent == gparent.left) {
                 // Case 1条件：叔叔节点是红色
                 RBTNode<T> uncle = gparent.right;
+
                 if ((uncle!=null) && isRed(uncle)) {
                     setBlack(uncle);
                     setBlack(parent);
                     setRed(gparent);
+                    //检查gParent是否合规
                     node = gparent;
                     continue;
                 }
@@ -318,7 +320,8 @@ public class RBTree<T extends Comparable<T>> {
                 setBlack(parent);
                 setRed(gparent);
                 rightRotate(gparent);
-            } else {    //若“z的父节点”是“z的祖父节点的右孩子”
+            } else {
+                //若“z的父节点”是“z的祖父节点的右孩子”
                 // Case 1条件：叔叔节点是红色
                 RBTNode<T> uncle = gparent.left;
                 if ((uncle!=null) && isRed(uncle)) {
@@ -361,6 +364,7 @@ public class RBTree<T extends Comparable<T>> {
         RBTNode<T> x = this.mRoot;
 
         // 1. 将红黑树当作一颗二叉查找树，将节点添加到二叉查找树中。
+        //遍历到最下面
         while (x != null) {
             y = x;
             cmp = node.key.compareTo(x.key);
