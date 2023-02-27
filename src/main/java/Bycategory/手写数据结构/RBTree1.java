@@ -1,6 +1,6 @@
 package Bycategory.手写数据结构;
 
-public class RBTree<T extends Comparable<T>> {
+public class RBTree1<T extends Comparable<T>> {
     private RBTNode<T> mRoot;    // 根结点
 
     private static final boolean RED   = false;
@@ -30,7 +30,7 @@ public class RBTree<T extends Comparable<T>> {
         }
     }
 
-    public RBTree() {
+    public RBTree1() {
         mRoot=null;
     }
 
@@ -364,6 +364,7 @@ public class RBTree<T extends Comparable<T>> {
         RBTNode<T> x = this.mRoot;
 
         // 1. 将红黑树当作一颗二叉查找树，将节点添加到二叉查找树中。
+        //y是最下面节点的parent
         //遍历到最下面
         while (x != null) {
             y = x;
@@ -416,6 +417,10 @@ public class RBTree<T extends Comparable<T>> {
      * 参数说明：
      *     node 待修正的节点
      */
+    // replace的兄弟和parent
+    // 由下向上调整
+    // 传入了一个child, parent,child是replace.right，或者是replace.left
+    // child是"取代节点"的右孩子，也是需要"调整的节点"
     private void removeFixUp(RBTNode<T> node, RBTNode<T> parent) {
         RBTNode<T> other;
 
@@ -434,6 +439,7 @@ public class RBTree<T extends Comparable<T>> {
                         (other.right==null || isBlack(other.right))) {
                     // Case 2: x的兄弟w是黑色，且w的俩个孩子也都是黑色的
                     setRed(other);
+                    //把node当做
                     node = parent;
                     parent = parentOf(node);
                 } else {
@@ -445,6 +451,7 @@ public class RBTree<T extends Comparable<T>> {
                         rightRotate(other);
                         other = parent.right;
                     }
+
                     // Case 4: x的兄弟w是黑色的；并且w的右孩子是红色的，左孩子任意颜色。
                     setColor(other, colorOf(parent));
                     setBlack(parent);
@@ -453,6 +460,7 @@ public class RBTree<T extends Comparable<T>> {
                     node = this.mRoot;
                     break;
                 }
+
             } else {
 
                 other = parent.left;
@@ -511,12 +519,14 @@ public class RBTree<T extends Comparable<T>> {
             // 用它来取代"被删节点"的位置，然后再将"被删节点"去掉。
             RBTNode<T> replace = node;
 
+            //获取后继结点是大于删除结点的最小结点
             // 获取后继节点
             replace = replace.right;
             while (replace.left != null)
                 replace = replace.left;
 
             // "node节点"不是根节点(只有根节点不存在父节点)
+            //进行replace操作
             if (parentOf(node)!=null) {
                 if (parentOf(node).left == node)
                     parentOf(node).left = replace;
@@ -552,6 +562,7 @@ public class RBTree<T extends Comparable<T>> {
             replace.left = node.left;
             node.left.parent = replace;
 
+
             if (color == BLACK)
                 removeFixUp(child, parent);
 
@@ -559,6 +570,8 @@ public class RBTree<T extends Comparable<T>> {
             return ;
         }
 
+        //被删除节点只有一个子节点
+        //那这一个子节点就是替换节点
         if (node.left !=null) {
             child = node.left;
         } else {
@@ -569,6 +582,7 @@ public class RBTree<T extends Comparable<T>> {
         // 保存"取代节点"的颜色
         color = node.color;
 
+        //看child是否为空
         if (child!=null)
             child.parent = parent;
 
