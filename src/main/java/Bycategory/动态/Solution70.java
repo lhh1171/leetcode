@@ -1,5 +1,10 @@
 package Bycategory.动态;
 
+//达到第i届有dp种方法====dp[i]
+//dp[i-2]再走两步
+//dp[i-1]再走一步
+//dp[i]
+//dp[i]=dp[i-2]+dp[i-1]
 class Solution70 {
     // 常规方式
     public int climbStairs1(int n) {
