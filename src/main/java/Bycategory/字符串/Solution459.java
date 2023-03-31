@@ -38,6 +38,14 @@ public class Solution459 {
 
     public static void main(String[] args) {
         Solution459 solution459=new Solution459();
+        //a的最长相等前后缀是0，因为他没有前后缀
+        //ab的最长相等前后缀是0，因为他他前缀是a,后缀是b
+        //aba  a  a 1
+        //abab ab ab 2
+        //ababa aba aba 3
+        //ababab abab abab 4
+        //abababa ababa ababa 5
+        //abababab ababab ababab 6
         //0 0 1 2 3 4 5 6
         solution459.repeatedSubstringPattern("abababab");
     }
