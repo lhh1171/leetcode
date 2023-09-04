@@ -1,6 +1,7 @@
 package Bycategory.链表;
 
 
+// https://leetcode.cn/problems/design-linked-list/
 public class Solution707 {
     //单链表
     static class ListNode1 {

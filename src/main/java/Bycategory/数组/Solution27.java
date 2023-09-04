@@ -1,5 +1,7 @@
 package Bycategory.数组;
 
+// 移除元素
+// https://leetcode.cn/problems/remove-element/
 public class Solution27 {
 
     public int removeElement1(int[] nums, int val) {

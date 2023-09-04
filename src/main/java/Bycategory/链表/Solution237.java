@@ -6,6 +6,7 @@ public class Solution237 {
         public Node next = null;
     }
 
+    // https://leetcode.cn/problems/delete-node-in-a-linked-list/
     public Node deleteNode(Node head, int target) {
         Node dummyHead = new Node();
         dummyHead.next = head;

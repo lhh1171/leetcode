@@ -12,6 +12,7 @@ public class Solution19 {
             this.val = val;
         }
     }
+    // 双指针
     public ListNode removeNthFromEnd(ListNode head,int n) {
         ListNode dummyHead = new ListNode();
         dummyHead.next = head;

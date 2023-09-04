@@ -28,6 +28,7 @@ public class Solution206 {
         return prev;
     }
 
+    // https://leetcode.cn/problems/reverse-linked-list/
     // 递归
     public ListNode reverseList2(ListNode head) {
         return reverse(null, head);

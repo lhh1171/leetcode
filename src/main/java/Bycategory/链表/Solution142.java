@@ -23,7 +23,8 @@ public class Solution142 {
             if (slow == fast) {
                 ListNode index1 = fast;
                 ListNode index2 = head;
-                // 两个指针，从头结点和相遇结点，各走一步，直到相遇，相遇点即为环入口
+                // 两个指针，从头结点和相遇结点，
+                // 各走一步，直到相遇，相遇点即为环入口
                 while (index1 != index2) {
                     index1 = index1.next;
                     index2 = index2.next;
